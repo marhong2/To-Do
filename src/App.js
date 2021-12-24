@@ -6,8 +6,7 @@ export default class ToDo extends Component {
     super(props)
     this.state = {
       list: [],
-      currText: "",
-      render: null
+      currText: ""
     }
     this.newTask = this.newTask.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -40,7 +39,6 @@ export default class ToDo extends Component {
         <br/>
         <input type="text" onChange={this.onChange} value={this.state.currText}></input>
         <button onClick={this.newTask} value={this.state.currText}>Create Task</button>
-
         {
           this.state.list.map((task, index) =>{
             return (
